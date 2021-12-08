@@ -21,7 +21,7 @@ mix.setPublicPath(dist)
   .sourceMaps(true)
   .version()
   .browserSync({
-    proxy: 'http://localhost/steffenkahl/public',
+    proxy: 'http://localhost/steffenkahl-portfolio/public',
     files: [
       "public/_resources/app/client/dist/css/*.css",
       "public/_resources/app/client/dist/js/*.js",

@@ -7,12 +7,14 @@ header{
         width: 100%;
         height: 40px;
         position: fixed;
-        top: 20px;
+        padding: 20px;
+        margin-top: 40px;
         z-index: 10;
 
         .header_bar_title{
-            padding: 0 20px;
+            flex: 1 1 auto;
             a{
+                padding: 0 10px;
                 text-decoration: none;
             }
         }
@@ -60,12 +62,11 @@ header{
 
         .header_bar_nav{
             display: none;
+            flex: 1 1 auto;
 
             @include media(">medium") {
                 display: block;
-                width: 100%;
                 ul{
-                    padding: 0 20px;
                     display: flex;
                     justify-content: flex-end;
 
