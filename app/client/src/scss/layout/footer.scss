@@ -1,0 +1,48 @@
+footer{
+    background-color: $ColorPrimary;
+    padding: 0;
+    margin: 0;
+
+    min-height: 250px;
+    margin-top: 100px;
+
+    .footer_content{
+        max-width: $maxWidth;
+        padding: 20px;
+        margin: 0 auto;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+
+        .footer_content_inprint{
+            p{
+                font-size: 16px;
+            }
+        }
+
+        .footer_content_menu{
+            ul{
+                display: flex;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    li{
+                        margin: 0;
+                        padding: 0px 10px;
+                        list-style: none;                     
+                    }
+                    &:first-child{
+                        border-right: 1px solid white;
+                    }
+
+                    &:hover{
+                        color: $ColorPrimary;
+                        background-color: white;
+                    }
+                }
+
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.section.section--list{
+    padding: 20px 20px;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    .section_title{
+        margin: 0 0 40px 0;
+    }
+
+    .section_list{
+        display: flex;
+        flex-wrap: wrap;
+        margin: -20px;
+        justify-content: center;
+
+        .list_item{
+            .item_title{
+                text-align: center;
+
+                img{
+                    height: 100px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .item_content{
+                text-align: left;
+                padding: 0;
+            }
+
+            @include media(">medium") {
+                flex: 0 1 calc(100%/3);
+                padding: 40px;
+            }
+        }
+    }
+}
