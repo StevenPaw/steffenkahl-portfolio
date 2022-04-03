@@ -7,6 +7,9 @@
 @import "layout/header";
 @import "layout/footer";
 
+@import "layout/introduction";
+@import "layout/reference-list";
+
 @import "layout/heroheader";
 @import "layout/chronic";
 
@@ -14,4 +17,23 @@
 
 body{
     background-color: black;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img{
+    max-width: 100%;
+}
+
+.section_content{
+    max-width: $maxWidth;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+a{
+    text-decoration: none;
 }

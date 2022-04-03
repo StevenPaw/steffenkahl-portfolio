@@ -1,0 +1,72 @@
+.section.section--introduction{
+    .section_content{
+        max-width: $maxWidth;
+        margin: 0 auto;
+
+        .introduction_title{
+            width: 100%;
+            padding: 100px 0px 0 0;
+            font-size: clamp(2rem, 0.5405rem + 6.4865vw, 5rem);
+            text-align: center;
+            border-bottom: 5px solid white;
+        }
+
+        .portrait{
+            width: 70%;
+            margin: 0 auto;
+            margin-top: -7vw;
+            clip-path: polygon(0% 80%, 50% 100%, 100% 80%, 100% 0%, 0% 0%);
+            img{
+                animation-duration: 0.5s;
+                animation-name: animate-movein;
+                animation-delay: 0.3s;
+                animation-timing-function: ease-out;
+                animation-fill-mode: backwards;
+                clip-path: polygon(0% 80%, 50% 100%, 100% 80%, 100% 0%, 0% 0%);
+            }
+
+            @include media(">desktop") {
+                width: 50%;
+                margin-top: -3.5vw;
+            }
+
+            @include media("<smartphone") {
+                width: 100%;
+                margin-top: -9vw;
+            }
+        }
+
+        .professions_list{
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            .professions_entry{
+                width: 15%;
+                
+                transition: transform 0.1s ease-in-out;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+
+            @include media("<medium") {
+                .professions_entry{
+                    width: 20%;
+                }
+            }
+
+            @include media("<smartphone") {
+                flex-wrap: wrap;
+                .professions_entry{
+                    width: 33%;
+                }
+            }
+        }
+    }
+}
+
+@keyframes animate-movein {
+    0% { transform: translateY(500px); }
+    100% { transform: translateY(0); }
+}

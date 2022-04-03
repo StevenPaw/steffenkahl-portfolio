@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1">
+    <path
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.935242;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 67.919202,4.3862586 13.059029,36.059795 V 99.406871 L 67.919202,131.0804 122.77937,99.406871 V 36.059795 Z"
+       id="path859" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.586px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.564651"
+       x="67.759903"
+       y="61.288773"
+       id="text2824"><tspan
+         id="tspan2822"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Metropolis;-inkscape-font-specification:'Metropolis Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.564651"
+         x="67.759903"
+         y="61.288773">WEB</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Metropolis;-inkscape-font-specification:'Metropolis Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.564651"
+         x="67.759903"
+         y="89.694504"
+         id="tspan2826">DEV</tspan></text>
+  </g>
+</svg>
