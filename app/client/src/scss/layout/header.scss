@@ -81,8 +81,8 @@ header{
                         padding: 0 10px;
 
                         img{
-                            height: 60px;
-                            width: 60px;
+                            height: 50px;
+                            width: 50px;
                         }
 
                         p{
@@ -126,7 +126,7 @@ header{
                     }
                 }
 
-                @include media("<medium") {
+                @include media("<desktop") {
                     display: none;
 
                     .body--show &{

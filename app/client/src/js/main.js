@@ -16,6 +16,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
     });
 
+    //Show hide
+    let showhideElements = [...document.querySelectorAll('[data-behaviour="showhide"]')];
+
+    showhideElements.forEach((element) => {
+        element.addEventListener("click", (e) => {
+            e.preventDefault();
+            element.parentNode.classList.toggle("visible")
+        })
+    });
+
 
     const menu_button = document.querySelector('[data-behaviour="toggle-menu"]');
 
