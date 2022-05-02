@@ -8,7 +8,11 @@
             padding: 100px 0px 0 0;
             font-size: clamp(2rem, 0.5405rem + 6.4865vw, 5rem);
             text-align: center;
-            border-bottom: 5px solid white;
+            border-bottom: 5px solid black;
+
+            .dark_mode--on &{
+                border-bottom: 5px solid white;
+            }
         }
 
         .portrait{
@@ -42,11 +46,15 @@
             justify-content: center;
             .professions_entry{
                 width: 15%;
-                
+                filter: invert(1);
                 transition: transform 0.1s ease-in-out;
 
                 &:hover{
                     transform: scale(1.1);
+                }
+
+                .dark_mode--on &{
+                    filter: none;
                 }
             }
 

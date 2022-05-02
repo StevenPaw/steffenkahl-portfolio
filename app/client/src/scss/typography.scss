@@ -3,12 +3,15 @@ body {
      font-weight: 400;
      font-size: 14px;
      line-height: 1.625;
-     color: $ColorWhite;
+     color: $ColorBlack;
+
+     &.dark_mode--on{
+          color: $ColorWhite;
+     }
 }
 
 h1 {
      margin: 0;
-     color: $ColorWhite;
      font-weight: 700;
      font-size: 100px;
      line-height: 0.8;
@@ -16,7 +19,6 @@ h1 {
 
 h2 {
      margin: 0;
-     color: $ColorWhite;
      font-weight: 700;
      font-size: 2rem;
      line-height: 1.442;
@@ -26,9 +28,9 @@ h2 {
      margin: 0 15px;
      padding: 10px;
      display: inline-block;
-     border-top: 1px solid $ColorWhite;
-     border-bottom: 1px solid $ColorWhite;
-     color: $ColorWhite;
+     border-top: 1px solid $ColorBlack;
+     border-bottom: 1px solid $ColorBlack;
+     color: $ColorBlack;
      position: relative;
      width: auto;
 
@@ -46,21 +48,45 @@ h2 {
 
      &::after{
           right: -16px;
-          border-right: 1px solid $ColorWhite;
-          border-top: 1px solid $ColorWhite;
+          border-right: 1px solid $ColorBlack;
+          border-top: 1px solid $ColorBlack;
      }
 
      &::before{
           left: -16px;
-          border-left: 1px solid $ColorWhite;
-          border-bottom: 1px solid $ColorWhite;
+          border-left: 1px solid $ColorBlack;
+          border-bottom: 1px solid $ColorBlack;
      }
 
      &:hover{
-          background-color: $ColorWhite;
-          color: black;
+          background-color: $ColorBlack;
+          color: $ColorWhite;
           &::after, &::before{
+               background-color: $ColorBlack;
+          }
+     }
+
+     .dark_mode--on &{
+          border-top: 1px solid $ColorWhite;
+          border-bottom: 1px solid $ColorWhite;
+          color: $ColorWhite;
+
+          &::after{
+               border-right: 1px solid $ColorWhite;
+               border-top: 1px solid $ColorWhite;
+          }
+     
+          &::before{
+               border-left: 1px solid $ColorWhite;
+               border-bottom: 1px solid $ColorWhite;
+          }
+
+          &:hover{
                background-color: $ColorWhite;
+               color: $ColorBlack;
+               &::after, &::before{
+                    background-color: $ColorWhite;
+               }
           }
      }
 }

@@ -17,8 +17,13 @@
 @import "items/blobbutton";
 
 body{
-    background-color: black;
+    background-color: $ColorWhite;
     scroll-behavior: smooth;
+    transition: background-color 0.3s ease-in-out;
+
+    &.dark_mode--on{
+        background-color: $ColorBlack;
+    }
 }
 
 html {

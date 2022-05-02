@@ -14,9 +14,13 @@
                 display: inline-block;
                 width: 20px;
                 height: 20px;
-                background-color: white;
+                background-color: $ColorBlack;
                 clip-path: polygon(50% 50%, 0 0, 100% 0);
                 transition: 0.3s ease-in-out;
+
+                .dark_mode--on &{
+                    background-color: $ColorWhite;
+                }
             }
         }
 
@@ -48,7 +52,8 @@
 
                 .skill_container {
                     width: 100%;
-                    background-color: rgb(29, 29, 29);
+                    background-color: rgb(255, 255, 255);
+                    box-shadow: 0 0 10px inset lightgray;
                     flex-shrink: 1;
                     border-radius: 30px;
                     overflow: hidden;
@@ -63,7 +68,7 @@
                         display: flex;
                         span{
                             width: 20%;
-                            border: 1px solid rgb(56, 56, 56);
+                            border-left: 1px solid rgb(212, 212, 212);
                             z-index: 5;
                         }
                     }
@@ -71,98 +76,22 @@
                     .skill_entry {
                         text-align: right;
                         padding: 0 20px;
-                        color: white;
-                        background-color: rgba(128, 128, 128, 0.8);
+                        color: $ColorBlack;
+                        background-color: rgba(214, 214, 214, 0.8);
                         width: 0%;
                         height: 100%;
                         border-radius: 0 30px 30px 0;
                         position: relative;
                         z-index: 10;
 
+                        .dark_mode--on &{
+                            color: $ColorWhite;
+                            background-color: rgba(87, 87, 87, 0.8);
+                        }
+
                         @include media("<smartphone") {
                             text-align: left;
                             padding: 0 10px;
-                        }
-            
-                        &.width100 {
-                            animation: width100fill 2s forwards;
-                        }
-                        @keyframes width100fill {
-                            100%{
-                                width: 100%;
-                            }
-                        }
-                        &.width90 {
-                            animation: width90fill 2s forwards;
-                        }
-                        @keyframes width90fill {
-                            100%{
-                                width: 90%;
-                            }
-                        }
-                        &.width80 {
-                            animation: width80fill 2s forwards;
-                        }
-                        @keyframes width80fill {
-                            100%{
-                                width: 80%;
-                            }
-                        }
-                        &.width70 {
-                            animation: width70fill 2s forwards;
-                        }
-                        @keyframes width70fill {
-                            100%{
-                                width: 70%;
-                            }
-                        }
-                        &.width60 {
-                            animation: width60fill 2s forwards;
-                        }
-                        @keyframes width60fill {
-                            100%{
-                                width: 60%;
-                            }
-                        }
-                        &.width50 {
-                            animation: width50fill 2s forwards;
-                        }
-                        @keyframes width50fill {
-                            100%{
-                                width: 50%;
-                            }
-                        }
-                        &.width40 {
-                            animation: width40fill 2s forwards;
-                        }
-                        @keyframes width40fill {
-                            100%{
-                                width: 40%;
-                            }
-                        }
-                        &.width30 {
-                            animation: width30fill 2s forwards;
-                        }
-                        @keyframes width30fill {
-                            100%{
-                                width: 30%;
-                            }
-                        }
-                        &.width20 {
-                            animation: width20fill 2s forwards;
-                        }
-                        @keyframes width20fill {
-                            100%{
-                                width: 20%;
-                            }
-                        }
-                        &.width10 {
-                            animation: width10fill 2s forwards;
-                        }
-                        @keyframes width10fill {
-                            100%{
-                                width: 10%;
-                            }
                         }
                     }
                 }
@@ -176,6 +105,93 @@
             }
             .skillset_content{
                 max-height: 800px;
+
+                .skill{
+                    .skill_container{
+                        .skill_entry{
+                            &.width100 {
+                                animation: width100fill 2s forwards;
+                            }
+                            @keyframes width100fill {
+                                100%{
+                                    width: 100%;
+                                }
+                            }
+                            &.width90 {
+                                animation: width90fill 2s forwards;
+                            }
+                            @keyframes width90fill {
+                                100%{
+                                    width: 90%;
+                                }
+                            }
+                            &.width80 {
+                                animation: width80fill 2s forwards;
+                            }
+                            @keyframes width80fill {
+                                100%{
+                                    width: 80%;
+                                }
+                            }
+                            &.width70 {
+                                animation: width70fill 2s forwards;
+                            }
+                            @keyframes width70fill {
+                                100%{
+                                    width: 70%;
+                                }
+                            }
+                            &.width60 {
+                                animation: width60fill 2s forwards;
+                            }
+                            @keyframes width60fill {
+                                100%{
+                                    width: 60%;
+                                }
+                            }
+                            &.width50 {
+                                animation: width50fill 2s forwards;
+                            }
+                            @keyframes width50fill {
+                                100%{
+                                    width: 50%;
+                                }
+                            }
+                            &.width40 {
+                                animation: width40fill 2s forwards;
+                            }
+                            @keyframes width40fill {
+                                100%{
+                                    width: 40%;
+                                }
+                            }
+                            &.width30 {
+                                animation: width30fill 2s forwards;
+                            }
+                            @keyframes width30fill {
+                                100%{
+                                    width: 30%;
+                                }
+                            }
+                            &.width20 {
+                                animation: width20fill 2s forwards;
+                            }
+                            @keyframes width20fill {
+                                100%{
+                                    width: 20%;
+                                }
+                            }
+                            &.width10 {
+                                animation: width10fill 2s forwards;
+                            }
+                            @keyframes width10fill {
+                                100%{
+                                    width: 10%;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

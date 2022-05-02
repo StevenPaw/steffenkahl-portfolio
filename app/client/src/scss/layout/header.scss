@@ -1,6 +1,45 @@
 header{
     margin: 0 auto;
 
+    .header_bar_right{
+        position: fixed;
+        right: 0;
+        height: 80px;
+        width: 80px;
+        z-index: 200;
+        background-color: $ColorBlack;
+
+        .dark_mode--on &{
+            background-color: $ColorWhite;
+        }
+
+        .header_dark_mode-toggle{
+            font-weight: 600;
+            transition: transform 0.5s;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 101;
+            order: 2;
+            transform-origin: center;
+            transform: rotate(90deg);
+
+            img{
+                display: block;
+                padding: 10px;
+                width: 60px;
+                height: 60px;
+                object-fit: contain;
+            }
+
+            .dark_mode--on &{
+                transform: rotate(0deg);
+                filter: invert(1);
+            }
+        }
+    }
+
     .header_bar{
         position: fixed;
         height: 80px;
@@ -63,6 +102,7 @@ header{
                 justify-content: flex-start;
                 padding: 0;
                 width: 80px;
+                transition: 0.3s ease-in-out;
 
                 a{
                     display: block;
@@ -127,13 +167,18 @@ header{
                 }
 
                 @include media("<desktop") {
-                    display: none;
+                    opacity: 0;
+                    transition: 0.3s ease-in-out;
 
                     .body--show &{
-                        display: block;
+                        opacity: 1;
                     }
                 }
             }
+        }
+
+        @include media("<desktop") {
+            border-radius: 0 0 30px 0;
         }
     }
 

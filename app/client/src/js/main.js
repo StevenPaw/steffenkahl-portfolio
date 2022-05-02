@@ -31,5 +31,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     menu_button.addEventListener('click', () => {
         document.body.classList.toggle('body--show');
+    });
+
+    let dark_mode_wanted = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if(dark_mode_wanted){
+        document.body.classList.toggle('dark_mode--on');
+    }
+
+    const dark_mode_button = document.querySelector('[data-behaviour="toggle-darkmode"]');
+
+    dark_mode_button.addEventListener('click', () => {
+        document.body.classList.toggle('dark_mode--on');
     })
 });
