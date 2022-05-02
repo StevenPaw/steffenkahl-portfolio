@@ -1,48 +1,84 @@
 footer{
-    background-color: $ColorPrimary;
-    padding: 0;
-    margin: 0;
 
-    min-height: 250px;
-    position: relative;
-    z-index: 100;
-
-    .footer_content{
-        max-width: $maxWidth;
-        padding: 20px;
-        margin: 0 auto;
-        color: white;
+    .footer_icon{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
 
-        .footer_content_inprint{
-            p{
-                font-size: 16px;
-            }
+        svg{
+            mix-blend-mode: multiply;
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            color: red;
+            animation: rainbow 20s infinite;
         }
 
-        .footer_content_menu{
-            ul{
-                display: flex;
-                a{
-                    text-decoration: none;
-                    color: white;
-                    li{
-                        margin: 0;
-                        padding: 0px 10px;
-                        list-style: none;                     
-                    }
-                    &:first-child{
-                        border-right: 1px solid white;
-                    }
+        @keyframes rainbow{
+            100%,0%{
+                color: rgb(255,0,0);
+            }
+            8%{
+                color: rgb(255,127,0);
+            }
+            16%{
+                color: rgb(255,255,0);
+            }
+            25%{
+                color: rgb(127,255,0);
+            }
+            33%{
+                color: rgb(0,255,0);
+            }
+            41%{
+                color: rgb(0,255,127);
+            }
+            50%{
+                color: rgb(0,255,255);
+            }
+            58%{
+                color: rgb(0,127,255);
+            }
+            66%{
+                color: rgb(0,0,255);
+            }
+            75%{
+                color: rgb(127,0,255);
+            }
+            83%{
+                color: rgb(255,0,255);
+            }
+            91%{
+                color: rgb(255,0,127);
+            }
+    }
 
-                    &:hover{
-                        color: $ColorPrimary;
-                        background-color: white;
-                    }
+        .dark_mode--on &{
+            filter: invert(1);
+        }
+    }
+
+    .footer_menu{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+
+        a{
+            color: $ColorBlack;
+            padding: 10px 20px;
+
+            &:hover{
+                background-color: $ColorBlack;
+                color: $ColorWhite;
+
+                .dark_mode--on &{
+                    background-color: $ColorWhite;
+                    color: $ColorBlack;
                 }
+            }
 
-                
+            .dark_mode--on &{
+                color: $ColorWhite;
             }
         }
     }

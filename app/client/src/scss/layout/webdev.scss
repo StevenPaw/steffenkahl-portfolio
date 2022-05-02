@@ -1,4 +1,4 @@
-.section.section--reference-list{
+.section.section--webdev{
     .section_content{
 
         .description{
@@ -19,26 +19,29 @@
             }
         }
 
-        .gd_examples{
+        .wd_examples{
             display: grid;
             padding: 20px 0;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 20px;
             grid-row-gap: 20px;
             grid-auto-rows: 1fr;
             
-            .gd_example_wrap{
+            .wd_example_wrap{
                 height: 100%;
                 position: relative;
                 transition: 0.3s ease-in-out;
-                .gd_example{
+                
+                .wd_example{
                     height: 100%;
                     border-radius: 10px;
                     overflow: hidden;
                     display: block;
+                    box-shadow: 0 0 20px 0px rgb(102, 102, 102);
                     animation-name: animatedshadow;
                     animation-duration: 4s;
                     animation-iteration-count: infinite;
+                    background-color: $ColorWhite;
                     
                     img{
                         &.background{
@@ -81,32 +84,14 @@
                     }
                 }
 
-                .foreground{
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
-                    transform: translateX(-50%);
-                    transition: top 0.3s ease-in-out, height 0.3s ease-in-out;
-                }
-
                 &:hover{
                     transform: scale(1.1);
-                    .foreground{
-                        top: -40px;
-                        height: 240px;
-                    }
+                    z-index: 50;
                 }
             }
 
             @include media("<desktop") {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            @include media("<medium") {
                 grid-template-columns: repeat(2, 1fr);
-                padding: 30px 0px;
             }
             @include media("<smartphone") {
                 grid-template-columns: repeat(1, 1fr);
@@ -118,5 +103,3 @@
         }
     }
 }
-
-
