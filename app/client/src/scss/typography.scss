@@ -24,69 +24,39 @@ h2 {
      line-height: 1.442;
 }
 
-.button {
-     margin: 0 15px;
-     padding: 10px;
-     display: inline-block;
-     border-top: 1px solid $ColorBlack;
-     border-bottom: 1px solid $ColorBlack;
-     color: $ColorBlack;
-     position: relative;
-     width: auto;
+.button_wrap{
+     filter: drop-shadow(0px -1px $ColorBlack) drop-shadow(-1px 0px $ColorBlack) drop-shadow(0 1px $ColorBlack) drop-shadow(1px 0 $ColorBlack);
 
-     &::after, &::before{
-          position: absolute;
-          content: "";
-          z-index: 1;
-          top: 6px;
-          bottom: 0;
-          transform: rotate(45deg);
-          height: 31px;
-          width: 31px;
-          z-index: -10;
-     }
+     .button {
+          margin: 0 15px;
+          padding: 10px 20px;
+          display: inline-block;
+          color: $ColorBlack;
+          background-color: $ColorWhite;
+          position: relative;
+          width: auto;
+          transform-style: preserve-3d;
+          clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 50%, calc(100% - 20px) 100%, 20px 100%, 0% 50%);
+          transition: 0.2s ease-in-out;
 
-     &::after{
-          right: -16px;
-          border-right: 1px solid $ColorBlack;
-          border-top: 1px solid $ColorBlack;
-     }
-
-     &::before{
-          left: -16px;
-          border-left: 1px solid $ColorBlack;
-          border-bottom: 1px solid $ColorBlack;
-     }
-
-     &:hover{
-          background-color: $ColorBlack;
-          color: $ColorWhite;
-          &::after, &::before{
+          &:hover{
                background-color: $ColorBlack;
+               color: $ColorWhite;
+          }
+
+          .dark_mode--on &{
+               border: 1px solid $ColorWhite;
+               color: $ColorWhite;
+               background-color: $ColorBlack;
+
+               &:hover{
+                    background-color: $ColorWhite;
+                    color: $ColorBlack;
+               }
           }
      }
 
      .dark_mode--on &{
-          border-top: 1px solid $ColorWhite;
-          border-bottom: 1px solid $ColorWhite;
-          color: $ColorWhite;
-
-          &::after{
-               border-right: 1px solid $ColorWhite;
-               border-top: 1px solid $ColorWhite;
-          }
-     
-          &::before{
-               border-left: 1px solid $ColorWhite;
-               border-bottom: 1px solid $ColorWhite;
-          }
-
-          &:hover{
-               background-color: $ColorWhite;
-               color: $ColorBlack;
-               &::after, &::before{
-                    background-color: $ColorWhite;
-               }
-          }
+          filter: drop-shadow(0px -1px $ColorWhite) drop-shadow(-1px 0px $ColorWhite) drop-shadow(0 1px $ColorWhite) drop-shadow(1px 0 $ColorWhite);
      }
 }

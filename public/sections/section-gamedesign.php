@@ -7,7 +7,9 @@
                 and also created some games before that I want to showcase. Some of the presented games
                 were made in teams and other games were developed completely on my own:
             </p>
-            <a href="https://stevenpaw.itch.io/" class="button">More on itch.io</a>
+            <span class="button_wrap">
+                <a href="https://stevenpaw.itch.io/" class="button">More on itch.io</a>
+            </span>
         </div>
         <div class="gd_examples">
             <a href="https://lalauveu.itch.io/breadcrumbs" class="gd_example_wrap">
