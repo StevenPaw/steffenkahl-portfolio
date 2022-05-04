@@ -25,37 +25,37 @@
                 <ul>
                     <a href="#aboutme">
                         <li>
-                            <img src="../public/images/icons/aboutme.svg">
+                            <img src="images/icons/aboutme.svg">
                             <p>About Me</p>
                         </li>
                     </a>
                     <a href="#gamedesign">
                         <li>
-                            <img src="../public/images/icons/gamedesign.svg">
+                            <img src="images/icons/gamedesign.svg">
                             <p>Gamedesign</p>
                         </li>
                     </a>
                     <a href="#graphicdesign">
                         <li>
-                            <img src="../public/images/icons/graphicdesign.svg">
+                            <img src="images/icons/graphicdesign.svg">
                             <p>Graphicdesign</p>
                         </li>
                     </a>
                     <a href="#webdev">
                         <li>
-                            <img src="../public/images/icons/webdev.svg">
+                            <img src="images/icons/webdev.svg">
                             <p>Web Development</p>
                         </li>
                     </a>
                     <a href="#eventtech">
                         <li>
-                            <img src="../public/images/icons/eventtech.svg">
+                            <img src="images/icons/eventtech.svg">
                             <p>Event Technician</p>
                         </li>
                     </a>
                     <a href="#skills">
                         <li>
-                            <img src="../public/images/icons/resume.svg">
+                            <img src="images/icons/resume.svg">
                             <p>Skills</p>
                         </li>
                     </a>
@@ -89,5 +89,5 @@
         </div>
     </footer>
 
-    <script src="../public/_resources/app/client/dist/js/main.js"></script>
+    <script src="_resources/app/client/dist/js/main.js"></script>
 </body>
