@@ -1,4 +1,35 @@
 .section.section--introduction{
+
+    .background{
+        width: 100%;
+        min-height: 600px;
+        margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 40px;
+        clip-path: polygon(0% 80%, 50% 100%, 100% 80%, 100% 0%, 0% 0%);
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -10;
+        opacity: 0.4;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @include media("<smartphone") {
+            width: 100%;
+            margin-top: -9vw;
+        }
+    }
+
     .section_content{
         max-width: $maxWidth;
         margin: 0 auto;
@@ -17,16 +48,24 @@
 
         .portrait{
             width: 70%;
+            min-height: 600px;
             margin: 0 auto;
             margin-top: -7vw;
             clip-path: polygon(0% 80%, 50% 100%, 100% 80%, 100% 0%, 0% 0%);
+            overflow: hidden;
+            position: relative;
             img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
                 animation-duration: 0.5s;
                 animation-name: animate-movein;
                 animation-delay: 0.3s;
                 animation-timing-function: ease-out;
                 animation-fill-mode: backwards;
-                clip-path: polygon(0% 80%, 50% 100%, 100% 80%, 100% 0%, 0% 0%);
             }
 
             @include media(">desktop") {

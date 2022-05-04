@@ -8,11 +8,11 @@
                 were made in teams and other games were developed completely on my own:
             </p>
             <span class="button_wrap">
-                <a href="https://stevenpaw.itch.io/" class="button">More on itch.io</a>
+                <a target="_blank" href="https://stevenpaw.itch.io/" class="button">More on itch.io</a>
             </span>
         </div>
         <div class="gd_examples">
-            <a href="https://lalauveu.itch.io/breadcrumbs" class="gd_example_wrap">
+            <a target="_blank" href="https://lalauveu.itch.io/breadcrumbs" class="gd_example_wrap">
                 <img class="foreground" src="images/breadcrumbs_foreground.png"/>
                 <div class="gd_example">
                     <img class="background" src="images/breadcrumbs_background.png"/>
@@ -21,7 +21,7 @@
                     <p>3D Visual Novel with a few puzzles about hansel and gretel created in a university course</p>
                 </div>
             </a>
-            <a href="https://stevenpaw.itch.io/the-executioner" class="gd_example_wrap">
+            <a target="_blank" href="https://stevenpaw.itch.io/the-executioner" class="gd_example_wrap">
                 <img class="foreground" src="images/theexecutioner_foreground.png"/>
                 <div class="gd_example">
                     <img class="background" src="images/theexecutioner_background.png"/>
@@ -30,7 +30,7 @@
                     <p>A 2D Executioner Simulator created in a university course</p>
                 </div>
             </a>
-            <a href="https://stevenpaw.itch.io/lumos-journey" class="gd_example_wrap">
+            <a target="_blank" href="https://stevenpaw.itch.io/lumos-journey" class="gd_example_wrap">
                 <img class="foreground" src="images/lumosjourney-foreground.png"/>
                 <div class="gd_example">
                     <img class="background" src="images/lumosjourney-background.png"/>
@@ -39,7 +39,7 @@
                     <p>A small 3D-Jumpn Run created in a university course</p>
                 </div>
             </a>
-            <a href="https://stevenpaw.itch.io/little-submarine" class="gd_example_wrap">
+            <a target="_blank" href="https://stevenpaw.itch.io/little-submarine" class="gd_example_wrap">
                 <img class="foreground" src="images/littlesubmarine_foreground.png"/>
                 <div class="gd_example">
                     <img class="background" src="images/littlesubmarine_background.jpg"/>

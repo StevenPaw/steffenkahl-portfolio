@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8">
     <title>Steffen Kahl - Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32"> 
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="96x96"> 
     <link rel="stylesheet" type="text/css" href="_resources/app/client/dist/css/styles.min.css"/>
 </head>
 <body>

@@ -8,11 +8,11 @@
                 Most of the times I work with Wordpress or Silverstripe to create what the customer wants.
             </p>
             <span class="button_wrap">
-                <a href="https://sp-universe.com/design-assets/design/" class="button">More references</a>
+                <a target="_blank" href="https://sp-universe.com/design-assets/design/" class="button">More references</a>
             </span>
         </div>
         <div class="wd_examples">
-            <a href="https://eutiner-koepfe.de/" class="wd_example_wrap">
+            <a target="_blank" href="https://eutiner-koepfe.de/" class="wd_example_wrap">
                 <div class="wd_example">
                     <img class="background" src="images/webdev/eutiner-koepfe.png"/>
                     <h4>2021</h4>
@@ -20,7 +20,7 @@
                     <p>A project from my work as workstudent for an art-project in Eutin</p>
                 </div>
             </a>
-            <a href="https://lesum.app/" class="wd_example_wrap">
+            <a target="_blank" href="https://lesum.app/" class="wd_example_wrap">
                 <div class="wd_example">
                     <img class="background" src="images/webdev/lesum.png"/>
                     <h4>2021</h4>
@@ -28,7 +28,7 @@
                     <p>This site was created for a small app startup for book suggestions</p>
                 </div>
             </a>
-            <a href="https://sp-universe.com/" class="wd_example_wrap">
+            <a target="_blank" href="https://sp-universe.com/" class="wd_example_wrap">
                 <div class="wd_example">
                     <img class="background" src="images/webdev/sp-universe.png"/>
                     <h4>2020</h4>

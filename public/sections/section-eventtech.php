@@ -8,11 +8,11 @@
                 Ahrensburg with an avantgardistic music and light show.
             </p>
             <span class="button_wrap">
-                <a href="https://musicandlight-ahrensburg.de/" class="button">To Music and Light Ahrensburg</a>
+                <a target="_blank" href="https://musicandlight-ahrensburg.de/" class="button">To Music and Light Ahrensburg</a>
             </span>
         </div>
         <div class="et_examples">
-            <a href="https://evj-ahrensburg.de/churchnight/" class="et_example_wrap">
+            <a target="_blank" href="https://evj-ahrensburg.de/churchnight/" class="et_example_wrap">
                 <div class="et_example">
                     <img class="background" src="images/eventtech/churchnight.jpg"/>
                     <h4>2022</h4>
@@ -20,7 +20,7 @@
                     <p>An avantgardistic light project that happens regularly in the churches in Ahrensburg</p>
                 </div>
             </a>
-            <a href="https://www.instagram.com/halloweenhaus.schmalenbeck/" class="et_example_wrap">
+            <a target="_blank" href="https://www.instagram.com/halloweenhaus.schmalenbeck/" class="et_example_wrap">
                 <div class="et_example">
                     <img class="background" src="images/eventtech/halloweenhaus-schmalenbeck.jpg"/>
                     <h4>2021</h4>
@@ -28,7 +28,7 @@
                     <p>Since a few years I create the spooky atmosphere for this friendly halloween house</p>
                 </div>
             </a>
-            <a href="https://www.instagram.com/p/B6b1qYJIiJr/" class="et_example_wrap">
+            <a target="_blank" href="https://www.instagram.com/p/B6b1qYJIiJr/" class="et_example_wrap">
                 <div class="et_example">
                     <img class="background" src="images/eventtech/rollerdisco.jpg"/>
                     <h4>2019</h4>

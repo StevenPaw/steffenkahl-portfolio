@@ -43,4 +43,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
     dark_mode_button.addEventListener('click', () => {
         document.body.classList.toggle('dark_mode--on');
     })
+
+    parallax();
 });
+
+//parallax
+function parallax() {
+
+    let listParallaxElements = [...document.querySelectorAll('[data-behaviour="parallax"]')];
+    //var parallax = document.querySelector('[data-behaviour="parallax"]');
+    listParallaxElements.forEach((parallax, i) => {
+        var scrolled = window.pageYOffset - (parallax.parentElement.offsetTop);
+
+        // You can adjust the data-speed dataset to set the scroll speed
+        var coords = (scrolled * parallax.dataset.speed) + 'px'
+        parallax.style.transform = 'translateY(' + coords + ')';
+    })
+};
+
+window.addEventListener('scroll', () => {
+    parallax();
+})
