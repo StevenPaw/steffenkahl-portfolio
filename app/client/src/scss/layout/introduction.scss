@@ -28,6 +28,10 @@
             width: 100%;
             margin-top: -9vw;
         }
+
+        .dark_mode--on &{
+            opacity: 0.7;
+        }
     }
 
     .section_content{
