@@ -1,0 +1,256 @@
+.section.section--gamedesign{
+    .section_content{
+
+        .description{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p{
+                width: 70%;
+            }
+
+            @include media("<medium") {
+                flex-wrap: wrap;
+                justify-content: center;
+                p{
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+        .gd_examples_slider{
+            position: relative;
+            padding: 40px 0;
+            display: block;
+            .gd_examples{
+                display: flex;
+                padding: 40px 50px;
+                margin: -30px -50px;
+                
+                position: relative;
+                overflow: scroll;
+                scroll-behavior: smooth;
+                &::-webkit-scrollbar {
+                    width: 0px;
+                    background: transparent;
+                }
+                
+                .gd_example_wrap{
+                    width: 25%;
+                    flex-shrink: 0;
+                    padding: 0 10px;
+                    position: relative;
+                    left: 0;
+                    transition: 0.3s ease-in-out;
+
+                    .gd_example{
+                        height: 100%;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        display: flex;
+                        flex-direction: column;
+                        animation-name: animatedshadow;
+                        animation-duration: 4s;
+                        animation-iteration-count: infinite;
+                        
+                        img{
+                            &.background{
+                                width: 100%;
+                                height: 200px;
+                                object-fit: cover;
+                            }
+                        }
+                        h4{
+                            font-weight: 200;
+                            font-size: 12px;
+                            margin-bottom: -5px;
+                            color: $ColorBlack;
+                            text-align: center;
+                            .dark_mode--on &{
+                                color: $ColorWhite
+                            }
+                        }
+                        h3{
+                            margin: 0;
+                            color: $ColorBlack;
+                            text-align: center;
+                            .dark_mode--on &{
+                                color: $ColorWhite
+                            }
+                        }
+                        p{
+                            color: $ColorBlack;
+                            text-align: center;
+                            padding: 0 10px 0 10px;
+
+                            .dark_mode--on &{
+                                color: $ColorWhite
+                            }
+                        }
+
+                        .areas{
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                            gap: 5px;
+                            margin-top: auto;
+                            padding-bottom: 10px;
+                            .area{
+                                display: inline-block;
+                                border-radius: 20px;
+                                font-size: 10px;
+                                border: 1px solid $ColorBlack;
+                                margin: 0;
+                            }
+                        }
+
+                        .links{
+                            display: flex;
+                            justify-content: center;
+                            padding-bottom: 10px;
+                            .link{
+                                width: 30px;
+                                height: 30px;
+                                img{
+                                    height: 100%;
+                                    width: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+
+                        .dark_mode--on &{
+                            animation-name: animatedshadowinverted;
+                            background-color: $ColorBlack;
+                            .area{
+                                border: 1px solid $ColorWhite;
+                            }
+                        }
+                    }
+
+                    .foreground{
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        width: calc(100% - 20px);
+                        height: 200px;
+                        object-fit: cover;
+                        transform: translateX(-50%);
+                        transition: top 0.3s ease-in-out, height 0.3s ease-in-out;
+                        pointer-events: none;
+                    }
+
+                    &:hover{
+                        transform: scale(1.05);
+                        .foreground{
+                            top: -40px;
+                            height: 240px;
+                        }
+                    }
+
+                    @include media("<desktop") {
+                        width: 33%;
+                    }
+                    @include media("<medium") {
+                        width: 50%;
+                    }
+                    @include media("<smartphone") {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &::after{
+                content: "";
+                background: linear-gradient(90deg, rgba(0,0,0,0) 0%, $ColorWhite 50%);
+                width: 10%;
+                height: 100%;
+                position: absolute;
+                top: 0%;
+                right: -10%;
+                pointer-events: none;
+                z-index: 5;
+                .dark_mode--on &{
+                    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, $ColorBlack 50%);
+                }
+            }
+
+            &::before{
+                content: "";
+                background: linear-gradient(90deg, $ColorWhite 50%, rgba(0,0,0,0) 100%);
+                width: 10%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: -10%;
+                pointer-events: none;
+                z-index: 5;
+                .dark_mode--on &{
+                    background: linear-gradient(90deg, $ColorBlack 50%, rgba(0,0,0,0) 100%);
+                }
+            }
+
+            @include media("<medium") {
+                text-align: center;
+            }
+
+            .slidebutton_wrap{
+                padding: 10px;
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 10;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+                .slidebutton{
+                    width: 20px;
+                    height: 30px;
+                    display: block;
+                    background-color: black;
+                    transition: 0.1s ease-in-out;
+
+                    &.previous{
+                        clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0% 50%);
+                    }
+
+                    &.next{
+                        clip-path: polygon(100% 50%, 0 100%, 25% 50%, 0% 0%);
+                    }
+
+                    &.hidden{
+                        display: none;
+                        pointer-events: none;
+                    }
+
+                    .dark_mode--on &{
+                        filter: invert(1);
+                    }
+                }
+
+                &.previous{
+                    left: -10px;
+                }
+
+                &.next{
+                    right: -10px;
+                }
+
+                &.hidden{
+                    opacity: 0;
+                    pointer-events: none;
+                }
+
+                &:hover{
+                    .slidebutton{
+                        width: 30px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

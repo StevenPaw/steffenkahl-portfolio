@@ -2,7 +2,7 @@
 
     .background{
         width: 100%;
-        min-height: 600px;
+        height: 90vh;
         margin: 0 auto;
         margin-top: 0;
         margin-bottom: 40px;
@@ -32,6 +32,22 @@
         .dark_mode--on &{
             opacity: 0.7;
         }
+
+        .tilting{
+            animation: tilting 5s ease-in-out infinite alternate;
+        }
+
+        .glowing{
+            animation: glowing 7s ease-in-out infinite alternate;
+        }
+
+        .sliding{
+            animation: sliding 4s ease-in-out infinite alternate;
+        }
+
+        .slidingslow{
+            animation: sliding 7s ease-in-out infinite alternate;
+        }
     }
 
     .section_content{
@@ -47,39 +63,6 @@
 
             .dark_mode--on &{
                 border-bottom: 5px solid white;
-            }
-        }
-
-        .portrait{
-            width: 70%;
-            min-height: 600px;
-            margin: 0 auto;
-            margin-top: -7vw;
-            clip-path: polygon(0% 80%, 50% 100%, 100% 80%, 100% 0%, 0% 0%);
-            overflow: hidden;
-            position: relative;
-            img{
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                animation-duration: 0.5s;
-                animation-name: animate-movein;
-                animation-delay: 0.3s;
-                animation-timing-function: ease-out;
-                animation-fill-mode: backwards;
-            }
-
-            @include media(">desktop") {
-                width: 50%;
-                margin-top: -3.5vw;
-            }
-
-            @include media("<smartphone") {
-                width: 100%;
-                margin-top: -9vw;
             }
         }
 
@@ -111,6 +94,7 @@
                 flex-wrap: wrap;
                 .professions_entry{
                     width: 33%;
+                    margin: -10px 0;
                 }
             }
         }
@@ -120,4 +104,19 @@
 @keyframes animate-movein {
     0% { transform: translateY(500px); }
     100% { transform: translateY(0); }
+}
+
+@keyframes tilting {
+    from {transform: rotate(-1deg);}
+    to {transform: rotate(1deg);}
+}
+
+@keyframes sliding {
+    from {transform: translateX(-5px);}
+    to {transform: translateX(5px);}
+}
+
+@keyframes glowing {
+    from {filter: brightness(1.1);}
+    to {filter: brightness(0.8);}
 }

@@ -1,4 +1,62 @@
 .section.section--aboutme{
     text-align: center;
-    margin: 0 auto;
+    margin: 45vh auto 100px auto;;
+    .section_content{
+        .aboutme_wrap{
+            display: flex;
+            justify-content: center;
+
+            .aboutme_image{
+                width: 35%;
+                flex-shrink: 0;
+                clip-path: polygon(0% 80%, 50% 100%, 100% 80%, 100% 0%, 0% 0%);
+                overflow: hidden;
+                position: relative;
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    animation-duration: 0.5s;
+                    animation-name: animate-movein;
+                    animation-delay: 0.3s;
+                    animation-timing-function: ease-out;
+                    animation-fill-mode: backwards;
+                }
+
+                @include media("<medium") {
+                    width: 50%;
+                }
+
+                @include media("<smartphone") {
+                    height: 80vw;
+                    width: 80%;
+                }
+            }
+
+            .aboutme_text{
+                width: 35%;
+                padding-left: 10px;
+
+                @include media("<medium") {
+                    width: 50%;
+                }
+
+                @include media("<smartphone") {
+                    padding: 20px 0;
+                    width: 100%;
+                }
+            }
+
+            @include media("<smartphone") {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    @include media("<medium") {
+        margin: 10px auto;
+    }
 }

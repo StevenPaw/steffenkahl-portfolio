@@ -9,7 +9,7 @@
 
 @import "layout/introduction";
 @import "layout/aboutme";
-@import "layout/reference-list";
+@import "layout/gamedesign";
 @import "layout/skills";
 @import "layout/contact";
 @import "layout/webdev";
@@ -24,6 +24,7 @@ body{
     background-color: $ColorWhite;
     scroll-behavior: smooth;
     transition: background-color 0.3s ease-in-out;
+    overflow-x: hidden;
 
     &.dark_mode--on{
         background-color: $ColorBlack;

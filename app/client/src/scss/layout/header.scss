@@ -8,6 +8,7 @@ header{
         width: 80px;
         z-index: 200;
         background-color: $ColorBlack;
+        border-radius: 0 0 0 30px;
 
         .dark_mode--on &{
             background-color: $ColorWhite;
@@ -103,7 +104,6 @@ header{
                 padding: 0;
                 width: 80px;
                 transition: 0.3s ease-in-out;
-                pointer-events: none;
 
                 a{
                     display: block;
@@ -176,6 +176,10 @@ header{
                         opacity: 1;
                     }
                 }
+            }
+
+            @include media("<desktop") {
+                pointer-events: none;
             }
         }
 

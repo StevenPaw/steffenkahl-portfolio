@@ -1,3 +1,28 @@
 .section.section--contact{
     text-align: center;
+    position: relative;
+
+    .section_content{
+        .links{
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            filter: invert(1);
+            .link{
+                padding: 0 3px;
+                width: 50px;
+                height: 50px;
+                transition: 0.2s ease-in-out;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .dark_mode--on &{
+                filter: invert(0);
+            }
+        }
+    }
 }
