@@ -1,0 +1,63 @@
+@use "variables" as *;
+@use "normalize";
+@use 'swiper/css/bundle';
+@use "fonts";
+@use "typography";
+
+@use "layout/header";
+@use "layout/footer";
+
+@use "elements/PortfolioElement";
+
+@use "layout/introduction";
+@use "layout/aboutme";
+@use "layout/gamedesign";
+@use "layout/skills";
+@use "layout/contact";
+@use "layout/eventtech";
+
+@use "layout/heroheader";
+@use "layout/chronic";
+
+@use "items/blobbutton";
+
+body{
+    background-color: $ColorWhite;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease-in-out;
+    overflow-x: hidden;
+
+    &.dark_mode--on{
+        background-color: $ColorBlack;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img{
+    max-width: 100%;
+}
+
+.section_content{
+    max-width: $maxWidth;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+@keyframes animatedshadow {
+    0% {box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);}
+    50% {box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);}
+    100% {box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);}
+}
+
+@keyframes animatedshadowinverted {
+    0% {box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.5);}
+    50% {box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.3);}
+    100% {box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.5);}
+}

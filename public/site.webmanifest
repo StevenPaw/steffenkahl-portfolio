@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "Steffen Kahl Portfolio",
+  "short_name": "SKP",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#151515",
+  "theme_color": "#383838",
+  "description": "Das offizielle Portfolio von Steffen Kahl, Webentwickler und Designer."
+}

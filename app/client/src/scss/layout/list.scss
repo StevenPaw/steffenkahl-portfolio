@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 .section.section--list{
     padding: 20px 20px;
     max-width: $maxWidth;
@@ -28,7 +30,7 @@
                 padding: 0;
             }
 
-            @include media(">medium") {
+            @include media(medium) {
                 flex: 0 1 calc(100%/3);
                 padding: 40px;
             }

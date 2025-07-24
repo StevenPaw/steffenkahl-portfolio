@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 .section.section--aboutme{
     text-align: center;
     margin: 45vh auto 100px auto;;
@@ -26,11 +28,11 @@
                     animation-fill-mode: backwards;
                 }
 
-                @include media("<medium") {
+                @include media(max-medium) {
                     width: 50%;
                 }
 
-                @include media("<smartphone") {
+                @include media(max-smartphone) {
                     height: 80vw;
                     width: 80%;
                 }
@@ -40,23 +42,23 @@
                 width: 35%;
                 padding-left: 10px;
 
-                @include media("<medium") {
+                @include media(max-medium) {
                     width: 50%;
                 }
 
-                @include media("<smartphone") {
+                @include media(max-smartphone) {
                     padding: 20px 0;
                     width: 100%;
                 }
             }
 
-            @include media("<smartphone") {
+            @include media(max-smartphone) {
                 flex-wrap: wrap;
             }
         }
     }
 
-    @include media("<medium") {
+    @include media(max-medium) {
         margin: 10px auto;
     }
 }
