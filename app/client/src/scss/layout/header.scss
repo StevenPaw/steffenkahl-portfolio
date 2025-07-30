@@ -13,11 +13,11 @@ header{
         height: 80px;
         width: 80px;
         z-index: 200;
-        background-color: $ColorBlack;
+        background-color: var(--ColorBlack);
         border-radius: 0 0 0 30px;
 
         .dark_mode--on &{
-            background-color: $ColorWhite;
+            background-color: var(--ColorWhite);
         }
 
         .header_dark_mode-toggle{

@@ -43,7 +43,7 @@
                     animation-name: animatedshadow;
                     animation-duration: 4s;
                     animation-iteration-count: infinite;
-                    background-color: $ColorWhite;
+                    background-color: var(--ColorWhite);
                     
                     img{
                         &.background{
@@ -56,33 +56,33 @@
                         font-weight: 200;
                         font-size: 12px;
                         margin-bottom: -5px;
-                        color: $ColorBlack;
+                        color: var(--ColorBlack);
                         text-align: center;
                         .dark_mode--on &{
-                            color: $ColorWhite
+                            color: var(--ColorWhite)
                         }
                     }
                     h3{
                         margin: 0;
-                        color: $ColorBlack;
+                        color: var(--ColorBlack);
                         text-align: center;
                         .dark_mode--on &{
-                            color: $ColorWhite
+                            color: var(--ColorWhite)
                         }
                     }
                     p{
-                        color: $ColorBlack;
+                        color: var(--ColorBlack);
                         text-align: center;
                         padding: 0 10px 0 10px;
 
                         .dark_mode--on &{
-                            color: $ColorWhite
+                            color: var(--ColorWhite)
                         }
                     }
 
                     .dark_mode--on &{
                         animation-name: animatedshadowinverted;
-                        background-color: $ColorBlack;
+                        background-color: var(--ColorBlack);
                     }
                 }
 

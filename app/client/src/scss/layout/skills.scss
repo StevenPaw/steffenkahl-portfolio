@@ -16,12 +16,12 @@
                 display: inline-block;
                 width: 20px;
                 height: 20px;
-                background-color: $ColorBlack;
+                background-color: var(--ColorBlack);
                 clip-path: polygon(50% 50%, 0 0, 100% 0);
                 transition: 0.3s ease-in-out;
 
                 .dark_mode--on &{
-                    background-color: $ColorWhite;
+                    background-color: var(--ColorWhite);
                 }
             }
         }
@@ -78,7 +78,7 @@
                     .skill_entry {
                         text-align: right;
                         padding: 0 20px;
-                        color: $ColorBlack;
+                        color: var(--ColorBlack);
                         background-color: rgba(214, 214, 214, 0.8);
                         width: 0%;
                         height: 100%;
@@ -88,7 +88,7 @@
                         transition: 0.5s ease-in-out;
 
                         .dark_mode--on &{
-                            color: $ColorWhite;
+                            color: var(--ColorWhite);
                             background-color: rgba(87, 87, 87, 0.8);
                         }
 

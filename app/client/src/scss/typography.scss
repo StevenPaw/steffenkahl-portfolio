@@ -5,10 +5,10 @@ body {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.625;
-    color: $ColorBlack;
+    color: var(--ColorBlack);
 
     &.dark_mode--on{
-        color: $ColorWhite;
+        color: var(--ColorWhite);
     }
 }
 
@@ -30,14 +30,14 @@ h2 {
 }
 
 .button_wrap{
-    filter: drop-shadow(0px -1px $ColorBlack) drop-shadow(-1px 0px $ColorBlack) drop-shadow(0 1px $ColorBlack) drop-shadow(1px 0 $ColorBlack);
+    filter: drop-shadow(0px -1px var(--ColorBlack)) drop-shadow(-1px 0px var(--ColorBlack)) drop-shadow(0 1px var(--ColorBlack)) drop-shadow(1px 0 var(--ColorBlack));
 
     .link--button {
         margin: 0 15px;
         padding: 10px 20px;
         display: inline-block;
-        color: $ColorBlack;
-        background-color: $ColorWhite;
+        color: var(--ColorBlack);
+        background-color: var(--ColorWhite);
         position: relative;
         width: auto;
         transform-style: preserve-3d;
@@ -45,23 +45,23 @@ h2 {
         transition: 0.2s ease-in-out;
 
         &:hover{
-            background-color: $ColorBlack;
-            color: $ColorWhite;
+            background-color: var(--ColorBlack);
+            color: var(--ColorWhite);
         }
 
         .dark_mode--on &{
-            border: 1px solid $ColorWhite;
-            color: $ColorWhite;
-            background-color: $ColorBlack;
+            border: 1px solid var(--ColorWhite);
+            color: var(--ColorWhite);
+            background-color: var(--ColorBlack);
 
             &:hover{
-                background-color: $ColorWhite;
-                color: $ColorBlack;
+                background-color: var(--ColorWhite);
+                color: var(--ColorBlack);
             }
         }
     }
 
     .dark_mode--on &{
-        filter: drop-shadow(0px -1px $ColorWhite) drop-shadow(-1px 0px $ColorWhite) drop-shadow(0 1px $ColorWhite) drop-shadow(1px 0 $ColorWhite);
+        filter: drop-shadow(0px -1px var(--ColorWhite)) drop-shadow(-1px 0px var(--ColorWhite)) drop-shadow(0 1px var(--ColorWhite)) drop-shadow(1px 0 var(--ColorWhite));
     }
 }

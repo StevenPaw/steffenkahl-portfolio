@@ -1,7 +1,11 @@
 <% if $Button %>
-    <a <% if $Button.OpenInNew %> target="_blank"<% end_if %> href="$Button.URL" class="wd_example_wrap swiper-slide">
-        <div class="wd_example">
-            <img class="background" src="$Image.AbsoluteLink"/>
+    <a <% if $Button.OpenInNew %> target="_blank"<% end_if %> href="$Button.URL" class="portfolio-card swiper-slide">
+        <div class="portfolio-card_inner">
+            <div class="portfolio-card_image">
+                <% if $Image %>
+                    <img class="background" src="$Image.AbsoluteLink"/>
+                <% end_if %>
+            </div>
             <h4>$Year</h4>
             <h3>$Title</h3>
             <div class="section_description">
@@ -10,9 +14,13 @@
         </div>
     </a>
 <% else %>
-    <div class="wd_example_wrap swiper-slide">
-        <div class="wd_example">
-            <img class="background" src="$Image.AbsoluteLink"/>
+    <div class="portfolio-card swiper-slide">
+        <div class="portfolio-card_inner">
+            <div class="portfolio-card_image">
+                <% if $Image %>
+                    <img class="background" src="$Image.AbsoluteLink"/>
+                <% end_if %>
+            </div>
             <h4>$Year</h4>
             <h3>$Title</h3>
             <div class="section_description">

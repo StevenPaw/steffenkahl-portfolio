@@ -6,7 +6,7 @@
     border-radius:30px;
 }
   
-$cyan: $ColorPrimary;
+$cyan: var(--ColorPrimary);
 $dark: white;
 $borderW: 2px;
 

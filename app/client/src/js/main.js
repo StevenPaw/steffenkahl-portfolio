@@ -33,11 +33,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const portfolioSliders = document.querySelectorAll('.portfolio_swiper');
 
     portfolioSliders.forEach(function (slider) {
+
+        var slidesPerView;
+        if(slider.dataset.slidesperview){
+            slidesPerView = parseInt(slider.dataset.slidesperview);
+        }
+
         const swiper = new Swiper(slider, {
             effect: 'slide',
             direction: 'horizontal',
-            slidesPerView: 3,
-            spaceBetween: 20,
+            slidesPerView: slidesPerView || 3,
+            spaceBetween: 40,
 
             // Navigation arrows
             navigation: {

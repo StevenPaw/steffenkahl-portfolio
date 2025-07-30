@@ -72,7 +72,9 @@ $breakpoints: (
   'desktop': 1000px
 );
 
-$ColorPrimary: #00CE88;
-
-$ColorBlack: black;
-$ColorWhite: white;
+body{
+    --ColorWhite: #ffffff;
+    --ColorBlack: #000000;
+    --ColorPrimary: #00CE88;
+    --ColorDarkGrey: #202020;
+}

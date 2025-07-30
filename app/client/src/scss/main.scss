@@ -20,15 +20,20 @@
 @use "layout/chronic";
 
 @use "items/blobbutton";
+@use "items/portfoliocard";
+
+@view-transition {
+    navigation: auto;
+}
 
 body{
-    background-color: $ColorWhite;
+    background-color: var(--ColorWhite);
     scroll-behavior: smooth;
     transition: background-color 0.3s ease-in-out;
     overflow-x: hidden;
 
     &.dark_mode--on{
-        background-color: $ColorBlack;
+        background-color: var(--ColorBlack);
     }
 }
 
@@ -48,6 +53,10 @@ img{
 
 a{
     text-decoration: none;
+}
+
+.swiper-wrapper{
+    align-items: stretch;
 }
 
 @keyframes animatedshadow {

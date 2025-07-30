@@ -29,7 +29,7 @@
                     position: absolute;
                     display: block;
                     content: "";
-                    border-left: 3px solid $ColorPrimary;
+                    border-left: 3px solid var(--ColorPrimary);
                     left: 15px;
                     right: 0;
                     top: 30px;

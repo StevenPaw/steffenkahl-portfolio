@@ -7,8 +7,16 @@ export default defineConfig(({command}) => {
     const origin = primary_url.replace(/:\d+$/, "") + `:5173`;
     return {
         server: {
-            host: '0.0.0.0',
+            host: "0.0.0.0",
             port: 5173,
+            strictPort: true,
+            origin: origin,
+            cors: {
+                origin: /https?:\/\/([A-Za-z0-9\-\.]+)?(\.ddev\.site)(?::\d+)?$/,
+            },
+            watch: {
+                usePolling: true, // Enable polling for file changes
+            }
         },
         alias: {
             alias: [{find: '@', replacement: './app/client/src'}],

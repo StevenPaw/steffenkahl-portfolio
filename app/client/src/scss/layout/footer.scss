@@ -66,21 +66,21 @@ footer{
         padding-bottom: 40px;
 
         a{
-            color: $ColorBlack;
+            color: var(--ColorBlack);
             padding: 10px 20px;
 
             &:hover{
-                background-color: $ColorBlack;
-                color: $ColorWhite;
+                background-color: var(--ColorBlack);
+                color: var(--ColorWhite);
 
                 .dark_mode--on &{
-                    background-color: $ColorWhite;
-                    color: $ColorBlack;
+                    background-color: var(--ColorWhite);
+                    color: var(--ColorBlack);
                 }
             }
 
             .dark_mode--on &{
-                color: $ColorWhite;
+                color: var(--ColorWhite);
             }
         }
     }

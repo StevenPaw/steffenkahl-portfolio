@@ -11,6 +11,7 @@ class PortfolioElement extends BaseElement
     private static $db = [
         "Text" => "HTMLText",
         "LinkAnchor" => "Varchar(255)",
+        "CardsPerPage" => "Int",
     ];
 
     private static $has_one = [
@@ -40,6 +41,9 @@ class PortfolioElement extends BaseElement
 
     public function getPortfolioEntries()
     {
+        if (!$this->CategoryID) {
+            return [];
+        }
         return $this->Category()->Entries()->sort('Year DESC, ID DESC');
     }
 }

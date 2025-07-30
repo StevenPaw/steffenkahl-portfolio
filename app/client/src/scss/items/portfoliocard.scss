@@ -1,0 +1,71 @@
+.portfolio-card {
+    height: auto;
+    transition: transform 0.1s ease-in-out;
+
+    .portfolio-card_inner {
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        display: block;
+        box-shadow: 0 0 20px 0px rgb(102, 102, 102);
+        animation-name: animatedshadow;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        background-color: var(--ColorWhite);
+
+        .portfolio-card_image{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: var(--ColorDarkGrey);
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        h4 {
+            font-weight: 200;
+            font-size: 12px;
+            margin-bottom: -5px;
+            color: var(--ColorBlack);
+            text-align: center;
+    
+            .dark_mode--on & {
+                color: var(--ColorWhite)
+            }
+        }
+    
+        h3 {
+            margin: 0;
+            color: var(--ColorBlack);
+            text-align: center;
+    
+            .dark_mode--on & {
+                color: var(--ColorWhite)
+            }
+        }
+    
+        p {
+            color: var(--ColorBlack);
+            text-align: center;
+            padding: 0 10px 0 10px;
+    
+            .dark_mode--on & {
+                color: var(--ColorWhite)
+            }
+        }
+    
+        .dark_mode--on & {
+            animation-name: animatedshadowinverted;
+            background-color: var(--ColorBlack);
+        }
+    }
+
+    &:hover {
+        transform: scale(1.03);
+        z-index: 50;
+    }
+}

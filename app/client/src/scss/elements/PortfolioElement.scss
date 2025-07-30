@@ -9,7 +9,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            p{
+            .text{
                 width: 70%;
             }
 
@@ -27,77 +27,17 @@
             padding: 20px 0;
             position: relative;
 
-            .swiper-wrapper{
-                align-items: stretch;
-            
-                .wd_example_wrap{
-                    position: relative;
-                    transition: 0.3s ease-in-out;
-                    display: block;
-                    
-                    .wd_example{
-                        height: 100%;
-                        border-radius: 10px;
-                        overflow: hidden;
-                        display: block;
-                        box-shadow: 0 0 20px 0px rgb(102, 102, 102);
-                        animation-name: animatedshadow;
-                        animation-duration: 4s;
-                        animation-iteration-count: infinite;
-                        background-color: $ColorWhite;
-                        
-                        img{
-                            &.background{
-                                width: 100%;
-                                height: 200px;
-                                object-fit: cover;
-                            }
-                        }
-                        h4{
-                            font-weight: 200;
-                            font-size: 12px;
-                            margin-bottom: -5px;
-                            color: $ColorBlack;
-                            text-align: center;
-                            .dark_mode--on &{
-                                color: $ColorWhite
-                            }
-                        }
-                        h3{
-                            margin: 0;
-                            color: $ColorBlack;
-                            text-align: center;
-                            .dark_mode--on &{
-                                color: $ColorWhite
-                            }
-                        }
-                        p{
-                            color: $ColorBlack;
-                            text-align: center;
-                            padding: 0 10px 0 10px;
-
-                            .dark_mode--on &{
-                                color: $ColorWhite
-                            }
-                        }
-
-                        .dark_mode--on &{
-                            animation-name: animatedshadowinverted;
-                            background-color: $ColorBlack;
-                        }
-                    }
-
-                    &:hover{
-                        transform: scale(1.05);
-                        z-index: 50;
-                    }
+            .swiper-actions {
+                .swiper-button-next, .swiper-button-prev {
+                    background-color: var(--ColorDarkGrey);
+                    color: var(--ColorWhite);
+                    width: 50px;
+                    height: 50px;
+                    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
                 }
 
-                @include media(max-desktop) {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-                @include media(max-smartphone) {
-                    grid-template-columns: repeat(1, 1fr);
+                .swiper-button-next {
+                    right: -20px;
                 }
             }
         }

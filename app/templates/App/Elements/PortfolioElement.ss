@@ -1,13 +1,13 @@
 <div class="section section--PortfolioElement" id="$LinkAnchor">
     <div class="section_content">
-        <h2>Web Development</h2>
+        <h2>$Title</h2>
         <div class="description">
             <div class="text">
                 $Text
             </div>
             <% include Button Button=$Button %>
         </div>
-        <div class="portfolio-entries portfolio_swiper">
+        <div class="portfolio-entries portfolio_swiper"  data-slidesperView="$CardsPerPage">
             <div class="swiper-wrapper">
                 <% loop $PortfolioEntries %>
                     <% include PortfolioCard %>
