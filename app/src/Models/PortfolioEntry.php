@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use SilverStripe\Assets\Image;
+use SilverStripe\Forms\ListboxField;
+use SilverStripe\Forms\MultiSelectField;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Security\Permission;
 use SilverStripe\LinkField\Models\Link;
@@ -17,12 +19,18 @@ class PortfolioEntry extends DataObject
 
     private static $has_one = [
         "Image" => Image::class,
+        "PopoutImage" => Image::class,
         "Button" => Link::class,
         "Category" => PortfolioCategory::class,
     ];
 
+    private static $many_many = [
+        "Skillsets" => PortfolioSkillset::class,
+    ];
+
     private static $owns = [
         "Image",
+        "PopoutImage",
         "Button",
     ];
 
@@ -56,6 +64,15 @@ class PortfolioEntry extends DataObject
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
+
+        //Change SkillSet field to a multiselect field
+        $fields->removeByName('Skillsets');
+        $fields->addFieldToTab('Root.Main', ListboxField::create(
+            'Skillsets',
+            'Fähigkeiten',
+            PortfolioSkillset::get()->map('ID', 'Title')
+        ));
+
         return $fields;
     }
 

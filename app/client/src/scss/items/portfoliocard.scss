@@ -6,18 +6,21 @@
         height: 100%;
         border-radius: 10px;
         overflow: hidden;
-        display: block;
+        display: grid;
+        grid-template-rows: 200px auto;
         box-shadow: 0 0 20px 0px rgb(102, 102, 102);
         animation-name: animatedshadow;
         animation-duration: 4s;
         animation-iteration-count: infinite;
         background-color: var(--ColorWhite);
+        border: 1px solid var(--ColorLightGrey);
 
         .portfolio-card_image{
             width: 100%;
             height: 200px;
             object-fit: cover;
             background-color: var(--ColorDarkGrey);
+            position: relative;
 
             img{
                 width: 100%;
@@ -57,15 +60,57 @@
                 color: var(--ColorWhite)
             }
         }
+
+        .section_skillsets {
+            display: flex;
+            gap: 0 15px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .skillset {
+                border: 1px solid var(--ColorDarkGrey);
+                border-radius: 15px;
+                font-size: 10px;
+
+                .dark_mode--on & {
+                    border: 1px solid var(--ColorWhite);
+                }
+            }
+        }
     
         .dark_mode--on & {
             animation-name: animatedshadowinverted;
             background-color: var(--ColorBlack);
+            border: none;
+        }
+    }
+
+    .portfolio-card_foreground {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 200px;
+        z-index: 2;
+        transition: top 0.2s ease-in-out, height 0.2s ease-in-out;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+            object-position: bottom;
         }
     }
 
     &:hover {
         transform: scale(1.03);
         z-index: 50;
+
+        .portfolio-card_foreground {
+            top: -50px;
+            height: 250px;
+        }
     }
 }

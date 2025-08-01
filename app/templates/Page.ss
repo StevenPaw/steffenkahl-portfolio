@@ -9,12 +9,11 @@
     <title>$Title - $SiteConfig.Title</title>
     
     $ViteClient.RAW
-    <link rel="stylesheet" href="$Vite("app/client/src/scss/main.scss")">
+    <link rel="stylesheet" href="$Vite('app/client/src/scss/main.scss')">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-    <link rel="mask-icon" href="../mask_icon.svg" color="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="./_resources/app/client/icons/favicon.svg">
+    <link rel="icon" type="image/png" href="./_resources/app/client/icons/favicon.svg">
+    <link rel="mask-icon" href="./_resources/app/client/icons/favicon.svg" color="#ffffff">
 
     <meta property="og:title" content="$Title - $SiteConfig.Title" />
     <meta property="og:site_name" content="$Title" />

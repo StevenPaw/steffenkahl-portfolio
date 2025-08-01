@@ -4,8 +4,8 @@ namespace App\Admins;
 
 use App\Models\PortfolioCategory;
 use App\Models\PortfolioEntry;
+use App\Models\PortfolioSkillset;
 use SilverStripe\Admin\ModelAdmin;
-use SilverStripe\Forms\GridField\GridField;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 class PortfolioAdmin extends ModelAdmin
@@ -13,6 +13,7 @@ class PortfolioAdmin extends ModelAdmin
     private static $managed_models = array(
         PortfolioCategory::class,
         PortfolioEntry::class,
+        PortfolioSkillset::class,
     );
 
     private static $url_segment = "portfolio";

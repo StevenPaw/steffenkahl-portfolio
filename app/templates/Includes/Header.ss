@@ -13,37 +13,37 @@
 
         <div class="header_bar_nav">
             <ul>
-                <a href="#aboutme">
+                <a href="./#aboutme">
                     <li>
                         <img src="images/icons/aboutme.svg">
                         <p>About Me</p>
                     </li>
                 </a>
-                <a href="#gamedesign">
+                <a href="./#gamedesign">
                     <li>
                         <img src="images/icons/gamedesign.svg">
                         <p>Gamedesign</p>
                     </li>
                 </a>
-                <a href="#graphicdesign">
+                <a href="./#graphicdesign">
                     <li>
                         <img src="images/icons/graphicdesign.svg">
                         <p>Graphicdesign</p>
                     </li>
                 </a>
-                <a href="#webdev">
+                <a href="./#webdev">
                     <li>
                         <img src="images/icons/webdev.svg">
                         <p>Web Development</p>
                     </li>
                 </a>
-                <a href="#eventtech">
+                <a href="./#eventtech">
                     <li>
                         <img src="images/icons/eventtech.svg">
                         <p>Event Technician</p>
                     </li>
                 </a>
-                <a href="#skills">
+                <a href="./#skills">
                     <li>
                         <img src="images/icons/resume.svg">
                         <p>Skills</p>

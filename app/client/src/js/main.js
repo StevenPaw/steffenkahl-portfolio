@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     portfolioSliders.forEach(function (slider) {
 
-        var slidesPerView;
+        var slidesPerView = 3;
         if(slider.dataset.slidesperview){
             slidesPerView = parseInt(slider.dataset.slidesperview);
         }
@@ -42,8 +42,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const swiper = new Swiper(slider, {
             effect: 'slide',
             direction: 'horizontal',
-            slidesPerView: slidesPerView || 3,
+            slidesPerView: 1,
             spaceBetween: 40,
+            breakpoints: {
+                // when window width is >= 320px
+                400: {
+                slidesPerView: 2,
+                spaceBetween: 20
+                },
+                // when window width is >= 480px
+                600: {
+                slidesPerView: 3,
+                spaceBetween: 30
+                },
+                // when window width is >= 640px
+                800: {
+                slidesPerView: slidesPerView,
+                spaceBetween: 40
+                }
+            },
 
             // Navigation arrows
             navigation: {
