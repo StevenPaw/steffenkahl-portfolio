@@ -1,5 +1,8 @@
-document.addEventListener("DOMContentLoaded", function (event) {
 
+import Swiper from 'swiper/bundle';
+import GLightbox from "glightbox";
+
+document.addEventListener("DOMContentLoaded", function (event) {
 
     //Show hide
     let listToggleElements = [...document.querySelectorAll('[data-behaviour="list-toggle"]')];
@@ -26,55 +29,45 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
     });
 
-    //Slider
-    let slideElementsNext = [...document.querySelectorAll('[data-behaviour="slide_next"]')];
-    slideElementsNext.forEach((element) => {
-        var maxScrollLeft = element.parentElement.children[0].scrollWidth;
-        element.addEventListener("click", (e) => {
-            e.preventDefault();
-            maxScrollLeft = element.parentElement.children[0].scrollWidth;
-            element.nextElementSibling.classList.remove("hidden");
-            if(window.innerWidth < 480){
-                element.parentElement.children[0].scrollLeft += window.innerWidth;
-                if(element.parentElement.children[0].scrollLeft + window.innerWidth >= maxScrollLeft){
-                    element.classList.toggle("hidden");
-                }
-            } else if(window.innerWidth < 700){
-                element.parentElement.children[0].scrollLeft += window.innerWidth / 2;
-                if(element.parentElement.children[0].scrollLeft + (window.innerWidth / 2) >= maxScrollLeft){
-                    element.classList.toggle("hidden");
-                }
-            } else {
-                element.parentElement.children[0].scrollLeft += window.innerWidth / 3;
-                if(element.parentElement.children[0].scrollLeft + (window.innerWidth / 3) >= maxScrollLeft){
-                    element.classList.toggle("hidden");
-                }
-            }
-        })
-    });
+    // init default Swipers:
+    const portfolioSliders = document.querySelectorAll('.portfolio_swiper');
 
-    let slideElementsPrevious = [...document.querySelectorAll('[data-behaviour="slide_previous"]')];
-    slideElementsPrevious.forEach((element) => {
-        element.addEventListener("click", (e) => {
-            e.preventDefault();
-            element.previousElementSibling.classList.remove("hidden");
-            if(window.innerWidth < 480){
-                element.parentElement.children[0].scrollLeft -= window.innerWidth;
-                if(element.parentElement.children[0].scrollLeft - window.innerWidth <= 0){
-                    element.classList.toggle("hidden");
+    portfolioSliders.forEach(function (slider) {
+
+        var slidesPerView = 3;
+        if(slider.dataset.slidesperview){
+            slidesPerView = parseInt(slider.dataset.slidesperview);
+        }
+
+        const swiper = new Swiper(slider, {
+            effect: 'slide',
+            direction: 'horizontal',
+            slidesPerView: 1,
+            spaceBetween: 40,
+            breakpoints: {
+                // when window width is >= 320px
+                400: {
+                slidesPerView: 2,
+                spaceBetween: 20
+                },
+                // when window width is >= 480px
+                600: {
+                slidesPerView: 3,
+                spaceBetween: 30
+                },
+                // when window width is >= 640px
+                800: {
+                slidesPerView: slidesPerView,
+                spaceBetween: 40
                 }
-            } else if(window.innerWidth < 700) {
-                element.parentElement.children[0].scrollLeft -= window.innerWidth / 2;
-                if(element.parentElement.children[0].scrollLeft - (window.innerWidth / 2) <= 0){
-                    element.classList.toggle("hidden");
-                }
-            } else {
-                element.parentElement.children[0].scrollLeft -= window.innerWidth / 3;
-                if(element.parentElement.children[0].scrollLeft - (window.innerWidth / 3) <= 0){
-                    element.classList.toggle("hidden");
-                }
-            }
-        })
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
     });
 
     //Toggle Menu

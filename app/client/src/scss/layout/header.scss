@@ -1,17 +1,24 @@
+@use "../variables" as *;
+
 header{
     margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 
     .header_bar_right{
-        position: fixed;
+        position: absolute;
         right: 0;
         height: 80px;
         width: 80px;
         z-index: 200;
-        background-color: $ColorBlack;
+        background-color: var(--ColorBlack);
         border-radius: 0 0 0 30px;
 
         .dark_mode--on &{
-            background-color: $ColorWhite;
+            background-color: var(--ColorWhite);
         }
 
         .header_dark_mode-toggle{
@@ -168,7 +175,7 @@ header{
                     }
                 }
 
-                @include media("<desktop") {
+                @include media(max-desktop) {
                     opacity: 0;
                     transition: 0.3s ease-in-out;
 
@@ -178,12 +185,12 @@ header{
                 }
             }
 
-            @include media("<desktop") {
+            @include media(max-desktop) {
                 pointer-events: none;
             }
         }
 
-        @include media("<desktop") {
+        @include media(max-desktop) {
             border-radius: 0 0 30px 0;
         }
     }

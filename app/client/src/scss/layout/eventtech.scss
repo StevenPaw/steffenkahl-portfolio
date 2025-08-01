@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 .section.section--eventtech{
     .section_content{
 
@@ -9,7 +11,7 @@
                 width: 70%;
             }
 
-            @include media("<medium") {
+            @include media(max-medium) {
                 flex-wrap: wrap;
                 justify-content: center;
                 p{
@@ -41,7 +43,7 @@
                     animation-name: animatedshadow;
                     animation-duration: 4s;
                     animation-iteration-count: infinite;
-                    background-color: $ColorWhite;
+                    background-color: var(--ColorWhite);
                     
                     img{
                         &.background{
@@ -54,33 +56,33 @@
                         font-weight: 200;
                         font-size: 12px;
                         margin-bottom: -5px;
-                        color: $ColorBlack;
+                        color: var(--ColorBlack);
                         text-align: center;
                         .dark_mode--on &{
-                            color: $ColorWhite
+                            color: var(--ColorWhite)
                         }
                     }
                     h3{
                         margin: 0;
-                        color: $ColorBlack;
+                        color: var(--ColorBlack);
                         text-align: center;
                         .dark_mode--on &{
-                            color: $ColorWhite
+                            color: var(--ColorWhite)
                         }
                     }
                     p{
-                        color: $ColorBlack;
+                        color: var(--ColorBlack);
                         text-align: center;
                         padding: 0 10px 0 10px;
 
                         .dark_mode--on &{
-                            color: $ColorWhite
+                            color: var(--ColorWhite)
                         }
                     }
 
                     .dark_mode--on &{
                         animation-name: animatedshadowinverted;
-                        background-color: $ColorBlack;
+                        background-color: var(--ColorBlack);
                     }
                 }
 
@@ -90,15 +92,15 @@
                 }
             }
 
-            @include media("<desktop") {
+            @include media(max-desktop) {
                 grid-template-columns: repeat(2, 1fr);
             }
-            @include media("<smartphone") {
+            @include media(max-smartphone) {
                 grid-template-columns: repeat(1, 1fr);
             }
         }
 
-        @include media("<medium") {
+        @include media(max-medium) {
             text-align: center;
         }
     }

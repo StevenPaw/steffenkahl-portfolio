@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 .section.section--imagetext{
     padding: 20px 20px;
 
@@ -24,7 +26,7 @@
                 }
             }
 
-            @include media(">medium") {
+            @include media(medium) {
                 flex: 1 1 50%;
                 padding-top: 0;
                 max-width: 66%;
@@ -36,13 +38,13 @@
                 width: 100%;
             }
 
-            @include media(">medium") {
+            @include media(medium) {
                 width: 50%;
                 padding-right: 40px;
             }
         }
 
-        @include media(">medium") {
+        @include media(medium) {
             flex-wrap: nowrap;
         }
     }
@@ -52,7 +54,7 @@
     &.image-right{
         .section_content{
             .section_content_image{
-                @include media(">medium") {
+                @include media(medium) {
                     order:2;
                     padding-right: 0;
                     padding-left: 40px;
