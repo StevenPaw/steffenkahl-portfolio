@@ -2,7 +2,7 @@
     <div class="section_content">
         <div class="aboutme_wrap">
             <div class="aboutme_image">
-                <img src="images/introduction_image_color.png" />
+                $Image
             </div>
             <div class="aboutme_text">
                 <h2>$Title</h2>
