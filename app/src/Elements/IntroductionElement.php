@@ -2,6 +2,7 @@
 
 namespace App\Elements;
 
+use App\Models\PortfolioCategory;
 use DNADesign\Elemental\Models\BaseElement;
 
 class IntroductionElement extends BaseElement
@@ -26,5 +27,11 @@ class IntroductionElement extends BaseElement
     {
         $fields = parent::getCMSFields();
         return $fields;
+    }
+
+    public function getCategories()
+    {
+        $categories = PortfolioCategory::get();
+        return $categories;
     }
 }

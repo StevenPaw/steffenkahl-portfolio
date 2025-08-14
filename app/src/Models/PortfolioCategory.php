@@ -9,6 +9,9 @@ class PortfolioCategory extends DataObject
 {
     private static $db = [
         "Title" => "Varchar(255)",
+        "ShortTitle1" => "Varchar(255)",
+        "ShortTitle2" => "Varchar(255)",
+        "AnchorLink" => "Varchar(255)",
         "SortOrder" => "Int",
     ];
 
