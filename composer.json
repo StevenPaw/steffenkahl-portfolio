@@ -24,7 +24,8 @@
     "endroid/qrcode": "^5.0",
     "atwx/silverstripe-vitehelper": "^1.1",
     "webbuilders-group/silverstripe-siteconfig-error-pages": "^3.0",
-    "plastyk/dashboard": "^5.0"
+    "plastyk/dashboard": "^5.0",
+    "tractorcow/silverstripe-fluent": "^8.0"
   },
   "require-dev": {
     "silverleague/ideannotator": "dev-silverstripe6 as 4.0",

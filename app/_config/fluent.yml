@@ -1,0 +1,62 @@
+---
+Name: myfluentconfig
+After: "#fluentconfig"
+---
+TractorCow\Fluent\Model\Locale:
+  default_records:
+    nl:
+      Title: DE
+      Locale: de_DE
+      URLSegment: de
+      IsGlobalDefault: 1
+    en:
+      Title: EN
+      Locale: en_US
+      URLSegment: en
+
+App\Models\PortfolioEntry:
+  extensions:
+    - TractorCow\Fluent\Extension\FluentExtension
+  translate:
+    - Title
+    - Description
+
+App\Models\Skill:
+  extensions:
+    - TractorCow\Fluent\Extension\FluentExtension
+  translate:
+    - Title
+    - ValueText
+
+App\Models\SkillCategory:
+  extensions:
+    - TractorCow\Fluent\Extension\FluentExtension
+  translate:
+    - Title
+
+App\Models\PortfolioCategory:
+  extensions:
+    - TractorCow\Fluent\Extension\FluentExtension
+  translate:
+    - Title
+    - ShortTitle1
+    - ShortTitle2
+
+App\Models\PortfolioSkillset:
+  extensions:
+    - TractorCow\Fluent\Extension\FluentExtension
+  translate:
+    - Title
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    fluent: TractorCow\Fluent\Extension\FluentExtension
+
+DNADesign\Elemental\Models\BaseElement:
+  inline_editable: false
+  extensions:
+    fluent: TractorCow\Fluent\Extension\FluentExtension
+    titlefieldfix: App\Extensions\ElementalTitleFluent
+  translate:
+    - Title
+    - ButtonID
